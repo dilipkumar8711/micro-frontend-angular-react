@@ -1,0 +1,20 @@
+# Ignore node_modules in all micro-frontends
+**/node_modules/
+
+# Angular / build output
+**/dist/
+**/out-tsc/
+
+# Logs
+**/npm-debug.log*
+**/yarn-error.log*
+
+# Environment files
+**/.env
+**/.env.*
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
