@@ -1,33 +1,55 @@
-<div style="padding: 20px; border: 2px solid #4CAF50; margin: 10px; background-color: #f0f8ff;">
-  <h1>🏠 Shell Application</h1>
+<div class="shell-container">
+  <h1 class="shell-title">🏠 Shell Application</h1>
   
-  <div style="margin: 20px 0;">
+  <div class="navigation-section">
     <h3>Navigation:</h3>
-    <nav style="margin: 10px 0;">
-      <a routerLink="/mfe1" style="margin-right: 15px; padding: 8px 16px; background: #2196F3; color: white; text-decoration: none; border-radius: 4px;">Angular MFE1</a>
-      <a routerLink="/mfe2" style="padding: 8px 16px; background: #FF5722; color: white; text-decoration: none; border-radius: 4px;">React MFE2</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a 
+        routerLink="/mfe1" 
+        class="nav-link nav-link-mfe1"
+        aria-label="Navigate to Angular MFE1">
+        Angular MFE1
+      </a>
+      <a 
+        routerLink="/mfe2" 
+        class="nav-link nav-link-mfe2"
+        aria-label="Navigate to React MFE2">
+        React MFE2
+      </a>
     </nav>
   </div>
 
-  <div style="margin: 20px 0; padding: 15px; background: #fff3cd; border-radius: 4px;">
+  <div class="send-section">
     <h3>📡 Send Data to Microfrontends:</h3>
-    <button (click)="sendToMFE1()" style="margin: 5px; padding: 10px 20px; background: #2196F3; color: white; border: none; border-radius: 4px; cursor: pointer;">
+    <button 
+      (click)="sendToMFE1()" 
+      class="btn btn-mfe1"
+      aria-label="Send message to MFE1"
+      type="button">
       Send to MFE1
     </button>
-    <button (click)="sendToMFE2()" style="margin: 5px; padding: 10px 20px; background: #FF5722; color: white; border: none; border-radius: 4px; cursor: pointer;">
+    <button 
+      (click)="sendToMFE2()" 
+      class="btn btn-mfe2"
+      aria-label="Send message to MFE2"
+      type="button">
       Send to MFE2
     </button>
-    <button (click)="sendToAll()" style="margin: 5px; padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">
+    <button 
+      (click)="sendToAll()" 
+      class="btn btn-broadcast"
+      aria-label="Broadcast message to all microfrontends"
+      type="button">
       Broadcast to All
     </button>
   </div>
 
-  <div style="margin: 20px 0; padding: 15px; background: #e8f5e9; border-radius: 4px;">
+  <div class="received-section">
     <h3>📥 Received Data:</h3>
-    <p style="font-family: monospace; background: white; padding: 10px; border-radius: 4px;">{{ receivedData() }}</p>
+    <p class="received-data" role="status" aria-live="polite">{{ receivedData }}</p>
   </div>
 </div>
 
-<div style="margin: 20px 10px;">
+<div class="router-outlet-container">
   <router-outlet></router-outlet>
 </div>

@@ -1,13 +1,18 @@
-.feature-container {
+.widget-container {
   padding: 20px;
-  border: 2px solid #2196F3;
+  border: 2px solid #FF5722;
   margin: 10px;
-  background-color: #e3f2fd;
+  background-color: #fbe9e7;
 }
 
-.feature-title {
+.widget-title {
+  color: #FF5722;
+  margin: 0 0 10px 0;
+}
+
+.widget-subtitle {
+  color: #666;
   margin: 0 0 20px 0;
-  color: #1976D2;
 }
 
 .send-section {
@@ -31,36 +36,36 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  transition: opacity 0.2s ease;
-
-  &:hover {
-    opacity: 0.9;
-  }
-
-  &:focus {
-    outline: 2px solid #000;
-    outline-offset: 2px;
-  }
-
-  &:active {
-    transform: translateY(1px);
-  }
+  transition: opacity 0.2s ease, transform 0.1s ease;
 }
 
-.btn-mfe2 {
-  background: #FF5722;
+.btn:hover {
+  opacity: 0.9;
+}
 
-  &:hover {
-    background: #E64A19;
-  }
+.btn:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-mfe1 {
+  background: #2196F3;
+}
+
+.btn-mfe1:hover {
+  background: #1976D2;
 }
 
 .btn-shell {
   background: #4CAF50;
+}
 
-  &:hover {
-    background: #45a049;
-  }
+.btn-shell:hover {
+  background: #45a049;
 }
 
 .received-section {
@@ -84,7 +89,7 @@
   min-height: 20px;
 }
 
-// Accessibility: visually hidden class for screen readers
+/* Accessibility: visually hidden class for screen readers */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -97,4 +102,4 @@
   border-width: 0;
 }
 
-// Made with Bob
+/* Made with Bob */

@@ -1,18 +1,26 @@
-<div style="padding: 20px; border: 2px solid #2196F3; margin: 10px; background-color: #e3f2fd;">
-  <h2>🔷 Angular MFE1 Feature</h2>
+<div class="feature-container">
+  <h2 class="feature-title">🔷 Angular MFE1 Feature</h2>
   
-  <div style="margin: 20px 0; padding: 15px; background: #fff3cd; border-radius: 4px;">
+  <div class="send-section">
     <h3>📡 Send Data:</h3>
-    <button (click)="sendToMFE2()" style="margin: 5px; padding: 10px 20px; background: #FF5722; color: white; border: none; border-radius: 4px; cursor: pointer;">
+    <button 
+      (click)="sendToMFE2()" 
+      class="btn btn-mfe2"
+      aria-label="Send message to MFE2"
+      type="button">
       Send to MFE2
     </button>
-    <button (click)="sendToShell()" style="margin: 5px; padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">
+    <button 
+      (click)="sendToShell()" 
+      class="btn btn-shell"
+      aria-label="Send message to Shell application"
+      type="button">
       Send to Shell
     </button>
   </div>
 
-  <div style="margin: 20px 0; padding: 15px; background: #e8f5e9; border-radius: 4px;">
+  <div class="received-section">
     <h3>📥 Received Data:</h3>
-    <p style="font-family: monospace; background: white; padding: 10px; border-radius: 4px;">{{ receivedData() }}</p>
+    <p class="received-data" role="status" aria-live="polite">{{ receivedData }}</p>
   </div>
 </div>
