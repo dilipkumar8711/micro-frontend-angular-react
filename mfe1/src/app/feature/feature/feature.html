@@ -1,1 +1,26 @@
-<p>mfe 1 feature works!</p>
+<div class="feature-container">
+  <h2 class="feature-title">🔷 Angular MFE1 Feature</h2>
+  
+  <div class="send-section">
+    <h3>📡 Send Data:</h3>
+    <button 
+      (click)="sendToMFE2()" 
+      class="btn btn-mfe2"
+      aria-label="Send message to MFE2"
+      type="button">
+      Send to MFE2
+    </button>
+    <button 
+      (click)="sendToShell()" 
+      class="btn btn-shell"
+      aria-label="Send message to Shell application"
+      type="button">
+      Send to Shell
+    </button>
+  </div>
+
+  <div class="received-section">
+    <h3>📥 Received Data:</h3>
+    <p class="received-data" role="status" aria-live="polite">{{ receivedData }}</p>
+  </div>
+</div>

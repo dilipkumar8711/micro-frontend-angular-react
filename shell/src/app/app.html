@@ -1,6 +1,55 @@
-<h1>Shell Works!</h1>
-<nav>
-  <a routerLink="/mfe1">Angular MFE1</a> |
-  <a routerLink="/mfe2">React MFE2</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="shell-container">
+  <h1 class="shell-title">🏠 Shell Application</h1>
+  
+  <div class="navigation-section">
+    <h3>Navigation:</h3>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a 
+        routerLink="/mfe1" 
+        class="nav-link nav-link-mfe1"
+        aria-label="Navigate to Angular MFE1">
+        Angular MFE1
+      </a>
+      <a 
+        routerLink="/mfe2" 
+        class="nav-link nav-link-mfe2"
+        aria-label="Navigate to React MFE2">
+        React MFE2
+      </a>
+    </nav>
+  </div>
+
+  <div class="send-section">
+    <h3>📡 Send Data to Microfrontends:</h3>
+    <button 
+      (click)="sendToMFE1()" 
+      class="btn btn-mfe1"
+      aria-label="Send message to MFE1"
+      type="button">
+      Send to MFE1
+    </button>
+    <button 
+      (click)="sendToMFE2()" 
+      class="btn btn-mfe2"
+      aria-label="Send message to MFE2"
+      type="button">
+      Send to MFE2
+    </button>
+    <button 
+      (click)="sendToAll()" 
+      class="btn btn-broadcast"
+      aria-label="Broadcast message to all microfrontends"
+      type="button">
+      Broadcast to All
+    </button>
+  </div>
+
+  <div class="received-section">
+    <h3>📥 Received Data:</h3>
+    <p class="received-data" role="status" aria-live="polite">{{ receivedData }}</p>
+  </div>
+</div>
+
+<div class="router-outlet-container">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,161 @@
+.shell-container {
+  padding: 20px;
+  border: 2px solid #4CAF50;
+  margin: 10px;
+  background-color: #f0f8ff;
+}
+
+.shell-title {
+  margin: 0 0 20px 0;
+  color: #2e7d32;
+}
+
+.navigation-section {
+  margin: 20px 0;
+}
+
+.navigation-section h3 {
+  margin-top: 0;
+  color: #1b5e20;
+}
+
+.nav-links {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+}
+
+.nav-link-mfe1 {
+  background: #2196F3;
+
+  &:hover {
+    background: #1976D2;
+  }
+}
+
+.nav-link-mfe2 {
+  background: #FF5722;
+
+  &:hover {
+    background: #E64A19;
+  }
+}
+
+.send-section {
+  margin: 20px 0;
+  padding: 15px;
+  background: #fff3cd;
+  border-radius: 4px;
+}
+
+.send-section h3 {
+  margin-top: 0;
+  color: #856404;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.btn-mfe1 {
+  background: #2196F3;
+
+  &:hover {
+    background: #1976D2;
+  }
+}
+
+.btn-mfe2 {
+  background: #FF5722;
+
+  &:hover {
+    background: #E64A19;
+  }
+}
+
+.btn-broadcast {
+  background: #4CAF50;
+
+  &:hover {
+    background: #45a049;
+  }
+}
+
+.received-section {
+  margin: 20px 0;
+  padding: 15px;
+  background: #e8f5e9;
+  border-radius: 4px;
+}
+
+.received-section h3 {
+  margin-top: 0;
+  color: #2e7d32;
+}
+
+.received-data {
+  font-family: 'Courier New', Courier, monospace;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  word-break: break-word;
+  min-height: 20px;
+}
+
+.router-outlet-container {
+  margin: 20px 10px;
+}
+
+// Accessibility: visually hidden class for screen readers
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Made with Bob
